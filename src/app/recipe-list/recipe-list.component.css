@@ -1,0 +1,23 @@
+
+h4{
+    font-weight: bold;
+    color: rgb(155, 37, 46);
+}
+h5{
+    font-weight: 700;
+}
+.difficulty-1{
+    font-weight: 500;
+    color: white;
+    background-color: red;
+}
+.difficulty-2{
+    font-weight: 500;
+    color: white;
+    background-color: rgb(136, 232, 52);
+}
+.fit-image{
+    width: 15em;
+    object-fit: cover;
+    height: 12em; /* only if you want fixed height */
+    }

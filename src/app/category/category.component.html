@@ -1,0 +1,4 @@
+<h3 class="text-center">Categories</h3>
+<div *ngFor="let category of categories" class="list-group">
+    <a [ngClass]="{'list-item-cat': category.categoryId%2 == '1', 'list-item-cat2': category.categoryId%2 == '0'}" class="list-group-item">{{category.categoryName}}</a>
+</div>

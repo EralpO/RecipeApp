@@ -1,0 +1,25 @@
+<div class="container">
+ <div class="row">
+      <div *ngFor="let recipe of recipes" class="col-6">
+        <div class="card text-center">
+            <div [ngClass]="{'difficulty-2': recipe.difficulty == 'Kolay' , 'difficulty-1': recipe.difficulty == 'Zor' }" class="card-header">
+            {{recipe.difficulty}}
+            </div>
+            <div>
+                <img class="img-thumbnail fit-image" src={{recipe.image}}>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{recipe.name}}</h5>
+              <p class="card-text">{{recipe.brief}} .</p>
+              <a href="#" (click)="openDetailedRecipe(recipe)" class="btn btn-primary">Tarifi incele</a>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+          </div>
+
+      </div>
+      
+
+ </div>
+</div>
