@@ -1,6 +1,7 @@
+import { RecipeService } from './../services/recipe.service';
 
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+
 import {Recipe} from './recipe';
 
 
@@ -17,14 +18,17 @@ export class RecipeListComponent implements OnInit {
 ];
 
   
-  constructor(private httpClient:HttpClient) { }
+  constructor(private recipeService:RecipeService) { }
 
-   openDetailedRecipe(recipe){
-  
+  listRecipes(){
+      this.recipeService.ListRecipes().subscribe(data =>{
+        this.recipes = data;
+        console.log(this.recipes)
+      })
    }
 
   ngOnInit(): void {
-  
+    this.listRecipes();
   }
 
 }
